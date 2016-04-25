@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splash_frame_layout">
+
+
+        <ImageView
+            android:id="@+id/splash_background_lorem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash_lorem_background"
+            android:background="@color/transparent" />
+
+        <ImageView
+            android:id="@+id/splash_background_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash_title_background"
+            android:background="@color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"/>
+
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/splash_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <com.reference.maczak.referenceapplication.splash.CirclePageIndicator
+                android:id="@+id/splash_indicator"
+                app:fillColor="#FFFFFF"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/splash_start_button"
+                android:layout_width="@dimen/splash_button_width"
+                android:layout_height="@dimen/splash_button_height"
+                android:background="@drawable/transparent_button_pressable"
+                android:text="@string/splash_button_text"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
